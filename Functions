@@ -1,0 +1,15 @@
+from qiskit import QuantumCircuit, QuantumRegister
+from qiskit_aer import AerSimulator
+from qiskit_ibm_runtime import QiskitRuntimeService
+from qiskit_ibm_runtime import SamplerV2 as Sampler
+from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
+from qiskit.visualization import plot_histogram
+from qiskit.circuit.library.standard_gates import XGate, HGate, ZGate, YGate
+
+def ghz_state(n):
+  qc = QuantumCircuit(n, n)
+  qc.h(0)
+  for i in range(0,n-1):
+    qc.cx(i, i+1)
+  return qc
+
