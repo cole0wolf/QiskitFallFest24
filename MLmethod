@@ -9,8 +9,8 @@ dims = (input_dims[0], input_dims[1])
 classes = 2  # Assuming binary classification
 
 # Set the path to your dataset (train and test directories)
-train_dir = 'RoadSigns/train'
-test_dir = 'RoadSigns/test'
+train_dir = 'Images/RoadSignsRaw/train'
+test_dir = 'Images/RoadSignsRaw/test'
 
 # ImageDataGenerator for data augmentation and preprocessing
 train_datagen = ImageDataGenerator(
